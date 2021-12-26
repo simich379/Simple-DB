@@ -1,0 +1,68 @@
+cmake_minimum_required(VERSION 3.16)
+project(SimpleDBMS)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(src)
+
+add_executable(SimpleDBMS
+        src/API.cpp
+        src/API.h
+        src/BlockNode.h
+        src/BPlusTree.h
+        src/BPlusTree.inl
+        src/BufferManager.cpp
+        src/BufferManager.h
+        src/CatalogManager.cpp
+        src/CatalogManager.h
+        src/CharWrapper.h
+        src/CreateIndexStatement.cpp
+        src/CreateIndexStatement.h
+        src/CreateTableStatement.cpp
+        src/CreateTableStatement.h
+        src/DeleteStatement.cpp
+        src/DeleteStatement.h
+        src/DropIndexStatement.cpp
+        src/DropIndexStatement.h
+        src/DropStatement.cpp
+        src/DropStatement.h
+        src/Exception.h
+        src/ExecfileStatement.cpp
+        src/ExecfileStatement.h
+        src/FileNode.cpp
+        src/FileNode.h
+        src/Index.h
+        src/IndexIterator.cpp
+        src/IndexIterator.h
+        src/IndexManager.cpp
+        src/IndexManager.h
+        src/InsertStatement.cpp
+        src/InsertStatement.h
+        src/LeafPosition.h
+        src/LexicalManager.cpp
+        src/LexicalManager.h
+        src/Node.h
+        src/Parser.cpp
+        src/Parser.h
+        src/ParserError.cpp
+        src/ParserError.h
+        src/Predicate.h
+        src/Property.h
+        src/QuitStatement.cpp
+        src/QuitStatement.h
+        src/RecordManager.cpp
+        src/RecordManager.h
+        src/REPL.cpp
+        src/REPL.h
+        src/SelectStatement.cpp
+        src/SelectStatement.h
+        src/Statement.h
+        src/Table.h
+        src/Token.cpp
+        src/Token.h
+        src/Type.h
+        src/Value.h
+        main.cpp
+        testApi.cpp
+        testCatalogManager.cpp
+        testRecordManager.cpp)
